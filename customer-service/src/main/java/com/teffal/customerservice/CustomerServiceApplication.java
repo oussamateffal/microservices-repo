@@ -18,18 +18,18 @@ public class CustomerServiceApplication {
 	CommandLineRunner commandLineRunner(CustomerServiceImpl customerService){
 		return args -> {
 
-//			customerService.saveCustomer(Customer.builder()
-//					.email("oussamateffal@gmail.com")
-//					.lastName("Oussama")
-//					.firstName("Teffal")
-//					.phone("0666666666")
-//					.build());
-//			customerService.saveCustomer(Customer.builder()
-//					.email("mohamed@gmail.com")
-//					.lastName("mohamed")
-//					.firstName("arabi")
-//					.phone("0666666776")
-//					.build());
+			customerService.saveCustomer(Customer.builder()
+					.email("oussamateffal@gmail.com")
+					.lastName("youssef")
+					.firstName("Teffal")
+					.phone("0666666666")
+					.build());
+			customerService.saveCustomer(Customer.builder()
+					.email("mohamed@gmail.com")
+					.lastName("mohamed")
+					.firstName("arabi")
+					.phone("0666666776")
+					.build());
 		};
 	}
 
