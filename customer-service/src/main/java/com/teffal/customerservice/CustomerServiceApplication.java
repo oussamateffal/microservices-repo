@@ -20,7 +20,7 @@ public class CustomerServiceApplication {
 
 			customerService.saveCustomer(Customer.builder()
 					.email("oussamateffal@gmail.com")
-					.lastName("youssef")
+					.lastName("Oussama")
 					.firstName("Teffal")
 					.phone("0666666666")
 					.build());
