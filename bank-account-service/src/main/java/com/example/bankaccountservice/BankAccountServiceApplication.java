@@ -1,6 +1,7 @@
 package com.example.bankaccountservice;
 
 import com.example.bankaccountservice.Clients.CustomerRestClient;
+import com.example.bankaccountservice.config.GlobalConfig;
 import com.example.bankaccountservice.entities.Account;
 import com.example.bankaccountservice.entities.AccountType;
 import com.example.bankaccountservice.services.AccountServiceImpl;
@@ -8,6 +9,8 @@ import com.example.bankaccountservice.services.IAccountService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 
@@ -19,6 +22,8 @@ import static java.text.ChoiceFormat.nextDouble;
 
 @SpringBootApplication
 @EnableFeignClients
+@EnableConfigurationProperties(GlobalConfig.class)
+@RefreshScope
 public class BankAccountServiceApplication {
 
     public static void main(String[] args) {
